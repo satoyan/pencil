@@ -833,6 +833,7 @@
                <Property name="textFont" displayName="Default Font" type="Font"><E>$$defaultTextFont</E></Property>
                 <Property name="textColor" displayName="Default Text Color" type="Color"><E>$$defaultLinkColor</E></Property>
                  <Property name="customStyle" displayName="Additional Style" type="PlainText"><![CDATA[]]></Property>
+             <Property name="externalLink" displayName="External Link" type="PlainText"><![CDATA[]]></Property>
             </PropertyGroup>
         </Properties>
 

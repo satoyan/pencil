@@ -71,7 +71,17 @@
             </g>
         </g>
     </xsl:template>
+
     <xsl:template mode="copy" match="*">
-        <xsl:copy-of select="."/>
+      <xsl:choose>
+        <xsl:when test="p:metadata/p:property/@name='externalLink'">
+          <a xlink:href="{p:metadata/p:property[@name='externalLink']/text()}" target="_parent">
+            <xsl:copy-of select="."/>
+          </a>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:copy-of select="."/>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
 </xsl:stylesheet>
